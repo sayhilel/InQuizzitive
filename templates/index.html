@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia Game</title>
+    <style>
+        body {
+            background-color: #000000; /* Gold */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #FFD700; /* Maroon */
+            padding: 20px;
+        }
+
+        #video {
+            display: block;
+            margin: 0 auto;
+            border: 5px solid #8B0000; /* Maroon border */
+        }
+    </style>
+
+
+    <script>
+        // Define a variable for the h1 content
+        var h1Content = "Devil's Invent Trivia Game";
+
+        // Function to update h1 content
+        function updateH1() {
+            // Select the first h1 element and update its content
+            document.querySelector('h1').textContent = h1Content;
+        }
+
+        // Call the updateH1 function when the page loads
+        window.onload = updateH1;
+    </script>
+</head>
+<body>
+    <!-- The h1 element will be updated by JavaScript -->
+    <h1></h1>
+    <img id="video" src="{{ url_for('video') }}" width="1920" height="1080">
+</body>
+</html>
